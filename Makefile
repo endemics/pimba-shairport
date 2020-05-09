@@ -1,5 +1,5 @@
 VERSION=$(shell git rev-parse --short HEAD)
-
+.PHONY: build run push
 all: build run
 
 build:
@@ -14,4 +14,4 @@ run:
 	  pimba/shairport:$(VERSION)
 
 push:
-    docker push pimba/shairport:$(VERSION)
+	docker push pimba/shairport:$(VERSION)
