@@ -14,4 +14,4 @@ run:
 	  pimba/shairport:$(VERSION)
 
 push:
-    docker push docker.io/pimba/shairport:$(VERSION)
+    docker push pimba/shairport:$(VERSION)
