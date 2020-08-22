@@ -1,4 +1,4 @@
-FROM alpine:edge as builder
+FROM alpine:3 as builder
 ARG VERSION=3.3rc7
 WORKDIR /root
 RUN apk add --no-cache \
@@ -27,7 +27,7 @@ RUN autoreconf -i -f \
         && make \
         && make install
 
-FROM alpine:edge
+FROM alpine:3
 RUN apk add --no-cache \
         dbus \
         alsa-lib \
