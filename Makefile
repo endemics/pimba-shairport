@@ -3,7 +3,7 @@ VERSION=$(shell git rev-parse --short HEAD)
 all: build run
 
 build:
-	docker build -t pimba/shairport:$(VERSION) .
+	docker build --no-cache -t pimba/shairport:$(VERSION) .
 
 run:
 	docker run -ti --rm \
